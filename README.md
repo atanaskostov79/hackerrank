@@ -1,3 +1,2 @@
 # hackerrank
-Test case in hackerrank Test
-Main
+Test case in hackerrank 
