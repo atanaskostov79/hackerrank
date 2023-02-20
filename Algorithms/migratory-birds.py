@@ -15,9 +15,13 @@ from collections import Counter
 #
 os.environ['OUTPUT_PATH'] = "junk.txt"
 def migratoryBirds(arr):
-    freq = Counter(arr)
-    return max(set(freq), key=arr.count)
-    # Write your code here
+    typecount = [0 for i in range(len(arr))]
+    for i in arr:
+        typecount[i - 1] += 1
+    max_count = max(typecount)
+    for i in range(5):
+        if typecount[i] == max_count:
+            return i + 1
 
 if __name__ == '__main__':
     fptr = open(os.environ['OUTPUT_PATH'], 'w')
